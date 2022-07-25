@@ -164,7 +164,7 @@ def main_worker(gpu, args):
         val_dataset = datasets.ImageFolder(valdir, val_transforms)
     elif args.val_dataset == "train":
         valdir = args.data_dir / "train"
-        val_dataset = ImageNetSubset(valdir, transform=val_transforms,start=args.subset+1, subset=args.val_subset)
+        val_dataset = ImageNetSubset(valdir, transform=val_transforms, start=args.subset+1, subset=args.val_subset)
     else:
         raise NotImplementedError
     print("Size of test dataset:", len(val_dataset))

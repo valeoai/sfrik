@@ -38,7 +38,7 @@ def get_arguments():
     parser.add_argument("--augmentations", choices=["SimCLR", "VICReg", "AUH", "OBoW", "SwAV"],
                         help="choose image augmentations implemented in previous SSL methods")
 
-    # Two-views image augmentation parameter (when setting '--augmentations SimCLR' or 'AUH' or 'AUH')
+    # Two-views image augmentation parameter (when setting '--augmentations SimCLR' or 'VICReg' or 'AUH')
     parser.add_argument("--size", type=int, help="Size of resized cropped image")
 
     # OBoW multicrop image augmentation parameters (when setting '--augmentations OBoW')
@@ -152,7 +152,7 @@ if __name__ == "__main__":
     train_stats = create_stats(args.stats_dir / "pretraining_stats", args, ["epoch", "loss"])
 
     # Augmentations
-    # Two views image augmùentations
+    # Two views image augmentation
     if args.augmentations in ["VICReg", "SimCLR", "AUH"]:
         transforms = eval(f"aug.{args.dataset}{args.augmentations}TrainTransform")(args.size)
         args.multicrop = None
