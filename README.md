@@ -1,6 +1,6 @@
 # SFRIK: Self-supervised learning with rotation-invariant kernels
 
-This repository provides a PyTorch implementation and pretrained models for SFRIK, as described in the paper [Self-supervised learning with rotation-invariant kernels]().\
+This repository provides a PyTorch implementation and pretrained models for SFRIK, as described in the paper [Self-supervised learning with rotation-invariant kernels](https://arxiv.org/abs/2208.00789).\
 Léon Zheng, Gilles Puy, Elisa Riccietti, Patrick Pérez, Rémi Gribonval.
 
 ![SFRIK](./img/sfrik_overview.png)
@@ -114,7 +114,7 @@ Each image is augmented into two views.
 
 ### Comparison to baselines: SimCLR, Alignment & Uniformity, VICReg
 Our code proposes a comparison of SFRIK to other self-supervised learning methods in a controlled 
-experimental setting, as described in the [paper](). In the following examples, we pretrain a ResNet18 backbone 
+experimental setting, as described in the [paper](https://arxiv.org/abs/2208.00789). In the following examples, we pretrain a ResNet18 backbone 
 during 100 epochs with a batch size of 2048, on a single node with 4 GPUs (32GB of memory each).
 We use image augmentations from [VICReg](https://arxiv.org/abs/2105.04906).
 
@@ -337,7 +337,7 @@ python logistic_regression.py \
 ## Hyperparameter tuning on a separate validation set
 For a rigorous comparison of all pretraining methods on IN20%,
 all hyperparameters are tuned on a separate validation set, which consists in an other 20 % subset of ImageNet train set.
-See the [paper]() for more details. 
+See the [paper](https://arxiv.org/abs/2208.00789) for more details. 
 The construction of this separate validation set is implemented in ``sfrik/dataset.py``.
 
 To evaluate models on this validation set instead of the usual ImageNet validation set 
@@ -395,7 +395,7 @@ If you find this repository useful in your research, please cite:
 @inproceedings{zheng2022sfrik,
   author  = {Léon Zheng and Gilles Puy and Elisa Riccietti and Patrick Pérez and Rémi Gribonval},
   title   = {Self-supervised learning with rotation-invariant kernels},
-  booktitle = {arXiV preprint ???????},
+  booktitle = {arXiV preprint 2208.00789},
   year    = {2022},
 }
 ```
