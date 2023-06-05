@@ -24,8 +24,8 @@ If you find this repository useful in your research, please cite:
 We provide our pretrained ResNet-50 backbone pretrained on full ImageNet during 200 epochs 
 with SFRIK (truncation order L=3, embedding dimension q=32768).
 
-| Method | Epochs | Batch-size | Dataset | ImageNet linear acc. | Pretrained weights (backbone only) | Full checkpoint
-|----------------|-------------------|---------------------|--------------------|--------------------|--------------------|
+| Method | Epochs | Batch-size | Dataset | ImageNet linear acc. | Pretrained weights (backbone only) | Full checkpoint 
+|----------------|-------------------|---------------------|--------------------|--------------------|--------------------| --------------------|
 | SFRIK (L=3, q=32768) | 200 | 2048 | ImageNet | 70.3 | [ResNet50](https://github.com/valeoai/sfrik/releases/download/v0.1.0/sfrik_32k_in1000_200ep_r50_backbone.pth) | [Part 1](https://github.com/valeoai/sfrik/releases/download/v0.1.0/sfrik_32k_in1000_200ep_r50_last_ckpaa) / [Part 2](https://github.com/valeoai/sfrik/releases/download/v0.1.0/sfrik_32k_in1000_200ep_r50_last_ckpab) / [Part 3](https://github.com/valeoai/sfrik/releases/download/v0.1.0/sfrik_32k_in1000_200ep_r50_last_ckpac) |
 
 The last checkpoint is split into 3 files, named ``sfrik_32k_in1000_200ep_r50_last_ckpaa``, ``sfrik_32k_in1000_200ep_r50_last_ckpab`` and ``sfrik_32k_in1000_200ep_r50_last_ckpac``. 
