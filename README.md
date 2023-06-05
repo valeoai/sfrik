@@ -1,17 +1,34 @@
 # SFRIK: Self-supervised learning with rotation-invariant kernels
 
-This repository provides a PyTorch implementation and pretrained models for SFRIK, as described in the paper [Self-supervised learning with rotation-invariant kernels]().\
-Léon Zheng, Gilles Puy, Elisa Riccietti, Patrick Pérez, Rémi Gribonval.
+TODO: Add pretrained models (tous), check code pour les autres évaluations transfer learning. A la fin: update sur software heritage
 
-![SFRIK](./img/sfrik_overview.png)
+This repository provides a PyTorch implementation and pretrained models for SFRIK. More details can be found in the paper:
+
+**Self-supervised learning with rotation-invariant kernels**, ICLR 2023 [[arXiv](https://arxiv.org/abs/2208.00789)]  
+by _Léon Zheng_, _Gilles Puy_, _Elisa Riccietti_, _Patrick Pérez_, _Rémi Gribonval_.
+
+![SFRIK](./img/sfrik-overview.png)
+
+If you find this repository useful in your research, please cite:
+```
+@inproceedings{
+  zheng2023selfsupervised,
+  title={Self-supervised learning with rotation-invariant kernels},
+  author={L{\'e}on Zheng and Gilles Puy and Elisa Riccietti and Patrick Perez and R{\'e}mi Gribonval},
+  booktitle={International Conference on Learning Representations},
+  year={2023},
+  url={https://openreview.net/forum?id=8uu6JStuYm}
+}
+```
+
 
 ## Pretrained models
 
 We provide our pretrained ResNet-50 backbone pretrained on full ImageNet during 200 epochs 
 with SFRIK (truncation order L=3, embedding dimension q=32768).
 
-| Method | Epochs | Batch-size | Dataset | ImageNet linear acc. | Pretrained weights (backbone only) | Full checkpoint |
-|----------------|-------------------|---------------------|--------------------|--------------------|-----------------------------|--------|
+| Method | Epochs | Batch-size | Dataset | ImageNet linear acc. | Pretrained weights (backbone only) | Full checkpoint
+|----------------|-------------------|---------------------|--------------------|--------------------|--------------------|
 | SFRIK (L=3, q=32768) | 200 | 2048 | ImageNet | 70.3 | [ResNet50](https://github.com/valeoai/sfrik/releases/download/v0.1.0/sfrik_32k_in1000_200ep_r50_backbone.pth) | [Part 1](https://github.com/valeoai/sfrik/releases/download/v0.1.0/sfrik_32k_in1000_200ep_r50_last_ckpaa) / [Part 2](https://github.com/valeoai/sfrik/releases/download/v0.1.0/sfrik_32k_in1000_200ep_r50_last_ckpab) / [Part 3](https://github.com/valeoai/sfrik/releases/download/v0.1.0/sfrik_32k_in1000_200ep_r50_last_ckpac) |
 
 The last checkpoint is split into 3 files, named ``sfrik_32k_in1000_200ep_r50_last_ckpaa``, ``sfrik_32k_in1000_200ep_r50_last_ckpab`` and ``sfrik_32k_in1000_200ep_r50_last_ckpac``. 
@@ -388,14 +405,3 @@ from [OBoW](https://github.com/valeoai/obow) and [SwAV](https://github.com/faceb
 
 ## License
 This code is released under the [Apache 2.0 license](./LICENSE).
-
-## Citation
-If you find this repository useful in your research, please cite:
-```
-@inproceedings{zheng2022sfrik,
-  author  = {Léon Zheng and Gilles Puy and Elisa Riccietti and Patrick Pérez and Rémi Gribonval},
-  title   = {Self-supervised learning with rotation-invariant kernels},
-  booktitle = {arXiV preprint ???????},
-  year    = {2022},
-}
-```
